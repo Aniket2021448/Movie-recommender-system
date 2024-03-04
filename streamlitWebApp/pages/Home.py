@@ -1,4 +1,3 @@
-import time
 from streamlit_option_menu import option_menu
 import streamlit as st
 import pickle
@@ -6,7 +5,6 @@ import http.client
 import json
 from urllib.parse import quote
 import requests
-import importlib.util
 import numpy as np
 
 similarities = []
