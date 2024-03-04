@@ -50,7 +50,7 @@ def GetMovieFromName(movie_name):
     encoded_movie_name = quote(movie_name)
     conn.request("GET", f"/imdb/imdbSearchByName?query={encoded_movie_name}", headers=headers)
 
-    res = conn.getresponse()
+    res = conn.getresponse()    
     data = res.read()
     decoded_data = data.decode("utf-8")
 
