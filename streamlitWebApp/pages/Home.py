@@ -8,8 +8,8 @@ import requests
 import numpy as np
 
 similarities = []
-for i in range(15):
-    filename = f'similarity_chunk_{i+1}.pkl'
+for i in range(15): #D:\PROJECTS\Movie-recommender-system\streamlitWebApp\similarity_chunk_1.pkl
+    filename = f"D:\PROJECTS\Movie-recommender-system\streamlitWebApp\\" + "similarity_chunk_{i+1}.pkl"
     with open(filename, 'rb') as f:
         chunk_data = pickle.load(f)
         similarities.append(chunk_data)
