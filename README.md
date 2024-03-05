@@ -10,4 +10,5 @@ How to setup
           It will launch the app on the browser
 
 . Live demo: https://movie-mind.streamlit.app/
+
 . Hosted using: Streamlit community cloud
