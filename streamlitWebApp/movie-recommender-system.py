@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 
 def render_About_page():
     # Load and run the Projects page script from the pages folder 
-    spec = importlib.util.spec_from_file_location("About", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\About.py")
+    spec = importlib.util.spec_from_file_location("About", "pages\About.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     # Call the main function from the Projects page script
@@ -16,7 +16,8 @@ def render_About_page():
 
 
 def render_home_page():
-    spec = importlib.util.spec_from_file_location("Home", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\Home.py")
+
+    spec = importlib.util.spec_from_file_location("Home", "pages\Home.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     # Call the main function from the Projects page script
@@ -25,7 +26,7 @@ def render_home_page():
 
 def render_contact_page():
     # Load and run the Projects page script from the pages folder
-    spec = importlib.util.spec_from_file_location("Contact", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\Contact.py")
+    spec = importlib.util.spec_from_file_location("Contact", "pages\Contact.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     # Call the main function from the Projects page script
