@@ -1,20 +1,35 @@
 import time
 from streamlit_option_menu import option_menu
 import streamlit as st
-from pages import Home, About, Contact
+import importlib.util
 
 st.set_page_config(layout="wide")
 
 
+def render_About_page():
+    # Load and run the Projects page script from the pages folder 
+    spec = importlib.util.spec_from_file_location("About", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\About.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    # Call the main function from the Projects page script
+    module.main()
+
 
 def render_home_page():
-    Home.main()
+    spec = importlib.util.spec_from_file_location("Home", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\Home.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    # Call the main function from the Projects page script
+    module.main()
 
-def render_about_page():
-    About.main()
 
 def render_contact_page():
-    Contact.main()
+    # Load and run the Projects page script from the pages folder
+    spec = importlib.util.spec_from_file_location("Contact", "D:\PROJECTS\Movie-recommender-system\streamlitWebApp\pages\Contact.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    # Call the main function from the Projects page script
+    module.main()
 
 
 # TO remove streamlit branding and other running animation
